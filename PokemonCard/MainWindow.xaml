@@ -1,0 +1,64 @@
+﻿<Window x:Class="PokemonCard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokemonCard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="400" Background="Gray"> 
+        <!---Rows for card section-->
+    <Grid Margin="20" Background="Yellow">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!---Header-->
+            <RowDefinition Height="2*"/> <!---Picture-->
+            <RowDefinition Height="Auto"/> <!---Sub Info-->
+            <RowDefinition Height="*"/> <!---Move 1-->
+            <RowDefinition Height="*"/> <!---Move 2-->
+            <RowDefinition Height="Auto"/> <!---Weak/Resist/Retreat-->
+            <RowDefinition Height="Auto"/> <!---Footer-->
+        </Grid.RowDefinitions>
+
+            <!---Columns for card section-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <!---Header Area-->
+        <Border Grid.Row="0" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
+            <TextBlock Text="Electabuzz" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+        </Border>
+        
+        <!---Picture Area-->
+        <Border Grid.Row="1" Margin="5" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1">
+            <Rectangle Width="300" Height="180" Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+        
+        <!---Sub Info-->
+        <Border BorderBrush="Black" BorderThickness="1" Margin="5" Grid.Row="2" Grid.ColumnSpan="3" Background="Silver">
+            <TextBlock Text="NO. 0125 Electric Pokemon HT:3'7`` WT: 66.1 lbs" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        
+        <!---Move 1-->
+        <Border Grid.Row="3" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
+            <TextBlock Text="Electro Combo" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+
+        <!---Move 2-->
+        <Border Grid.Row="4" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
+            <TextBlock Text="Light Punch" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+
+        <!---Weak/Resist/Retreat-->
+        <Border Grid.Row="5" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black" >
+            <TextBlock Text="Weakness   |     Resist    |    Retreat" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+
+        <!---Footer-->
+        <Border Grid.Row="6" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
+            <TextBlock Text="Footer" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        
+    </Grid>
+</Window>
