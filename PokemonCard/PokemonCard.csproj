@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Image\electabuzz.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\electabuzz.png" />
+  </ItemGroup>
+
 </Project>

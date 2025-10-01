@@ -24,41 +24,143 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        
-        <!---Header Area-->
-        <Border Grid.Row="0" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
-            <TextBlock Text="Electabuzz" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+
+        <!--HEADER-->
+        <Grid Grid.Row="0" Grid.ColumnSpan="3" Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <!--Name-->
+            <Border Grid.Column="0" Margin="2" Padding="5">
+                <TextBlock Text="Electabuzz" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="17" FontWeight="Bold" FontFamily="Ebrima"/>
+            </Border>
+
+            <!--Empty Space-->
+            <Border Grid.Column="1" Margin="2" Padding="5">
+                <TextBlock Text="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+
+            <!--HP-->
+            <Border Grid.Column="2" Padding="5" Margin="2">
+                <TextBlock  Text="HP: 90 ⚡" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+            </Border>
+        </Grid>
+
+        <!---IMAGE-->
+        <Border Margin="6, 0, 6, 0" Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1" Background="White">
+            <Image Source="/Image/electabuzz.png" Width="400" Height="200"/>
         </Border>
         
-        <!---Picture Area-->
-        <Border Grid.Row="1" Margin="5" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1">
-            <Rectangle Width="300" Height="180" Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <!---SUB INFO-->
+        <Border Grid.Row="2" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1" Margin="6, 0, 6, 10">
+            <TextBlock Text="NO. 0125 Electric Pokemon HT: 3'7´´ WT:66.1 lbs" TextAlignment="Center" Background="Silver"/>
         </Border>
         
-        <!---Sub Info-->
-        <Border BorderBrush="Black" BorderThickness="1" Margin="5" Grid.Row="2" Grid.ColumnSpan="3" Background="Silver">
-            <TextBlock Text="NO. 0125 Electric Pokemon HT:3'7`` WT: 66.1 lbs" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        </Border>
+        <!---ATTACK 1-->
+        <Grid Grid.Row="3" Grid.ColumnSpan="3" Margin="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <!---Attack Header-->
+                <RowDefinition Height="Auto"/> <!---Attack Description-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/> <!---Icon-->
+                <ColumnDefinition Width="*"/> <!---Name-->
+                <ColumnDefinition Width="Auto"/> <!---Damage-->
+            </Grid.ColumnDefinitions>
+
+            <!---Header Row-->
+            <Border Grid.Row="0" Grid.Column="0" Margin="2" Padding="5">
+                <TextBlock Text="⚡" FontSize="15"/>
+            </Border>
+
+            <Border Grid.Row="0" Grid.Column="1" Margin="2" Padding="6">
+                <TextBlock Text="Electro Combo" TextAlignment="Center" FontWeight="Bold" FontSize="15"/>
+            </Border>
+
+            <Border Grid.Row="0" Grid.Column="2" Margin="2" Padding="6">
+                <TextBlock Text="10+" FontWeight="Bold" FontSize="15"/>
+            </Border>
+            
+            <!---Description Row-->
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="2">
+                <TextBlock Text="If Magmar is on your Bench, this attack does 40 more damage." FontSize="13" TextWrapping="Wrap"/>
+            </Border>
+            
+        </Grid>
+
+        <!---ATTACK 2-->
+        <Grid Grid.Row="4" Grid.ColumnSpan="3" Margin="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <!---Attack Header-->
+                <RowDefinition Height="Auto"/> <!---Attack Description-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.Column="0" Margin="2" Padding="5">
+                <TextBlock Text="⚡★" FontSize="15"/>
+            </Border>
+
+            <Border Grid.Row="0" Grid.Column="1" Margin="2" Padding="6">
+                <TextBlock Text="Light Punch" FontSize="15" FontWeight="Bold" TextAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Row="0" Grid.Column="2" Margin="2" Padding="6">
+                <TextBlock Text="30" FontSize="15" FontWeight="Bold"/>
+            </Border>
+
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="6">
+                <TextBlock Text="" FontSize="13" TextWrapping="Wrap"/>
+            </Border>
+        </Grid>
         
-        <!---Move 1-->
-        <Border Grid.Row="3" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
-            <TextBlock Text="Electro Combo" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <!---WEAK / RESIST / RETREAT-->
+        <Grid Grid.Row="5" Grid.ColumnSpan="3" Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Padding="5" Margin="2">
+                <TextBlock Text="Weakness"/>
+            </Border>
+
+            <Border Grid.Column="1" Padding="5" Margin="2">
+                <TextBlock Text="Resistance"/>
+            </Border>
+
+            <Border Grid.Column="2" Padding="5" Margin="2">
+                <TextBlock Text="Retreat"/>
+            </Border>
+        </Grid>
+        
+        <!---FOOTER-->
+        <Grid Grid.Row="6" Grid.ColumnSpan="3" Margin="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
+            <TextBlock Text="125/165" FontSize="12"/>
         </Border>
 
-        <!---Move 2-->
-        <Border Grid.Row="4" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
-            <TextBlock Text="Light Punch" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
+            <TextBlock Text="Copyright Text" FontSize="12"/>
         </Border>
 
-        <!---Weak/Resist/Retreat-->
-        <Border Grid.Row="5" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black" >
-            <TextBlock Text="Weakness   |     Resist    |    Retreat" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        </Border>
-
-        <!---Footer-->
-        <Border Grid.Row="6" Grid.ColumnSpan="3" Margin="5" BorderThickness="1" BorderBrush="Black">
-            <TextBlock Text="Footer" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
+            <TextBlock Text="yada text" FontSize="12" TextWrapping="Wrap"/>
         </Border>
         
+        </Grid>
     </Grid>
 </Window>
